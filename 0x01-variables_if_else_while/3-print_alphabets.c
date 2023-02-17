@@ -1,18 +1,20 @@
+#include <stdlib.h>
+#include <time.h>
 #include <stdio.h>
 
 /**
- * main - main function
- * Description:printing alphabets in lowercase
- * Return: Return
+ * main - Entry point
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int ch, CH;
+	char letters[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	int i;
 
-	for (ch = 'a'; ch <= 'z'; ch++)
-		putchar(ch);
-	for (CH = 'A'; CH <= 'Z'; CH++)
-		putchar(CH);
-		putchar('\n');
+	for (i = 0; i <= 51; i++)
+	{
+		putchar(letters[i]);
+	}
+	putchar('\n');
 	return (0);
 }
