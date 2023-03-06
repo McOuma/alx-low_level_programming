@@ -1,22 +1,20 @@
-#include <stdio.h>
 #include "main.h"
 /**
-* print_diagsums - sum of the two diagonals
-* @a: array
-* @size: size
-*/
-void print_diagsums(int *a, int size)
+ * *_memset - Fills memory with a constant byte
+ *
+ * @s: pointer
+ * @b: char
+ * @n: unsigned int
+ *
+ *Return: s
+ */
+char *_memset(char *s, char b, unsigned int n)
 {
-int n1 = 0;
-int n2 = 0;
-int i = 0;
-while (i < size)
+unsigned int index;
+for (index = 0; n > 0; index++)
 {
-n1 += a[i * (size + 1)];
-n2 += a[(i + 1) * (size - 1)];
-i++;
+s[index] = b;
+n -= 1;
 }
-printf("%d, ", n1);
-printf("%d", n2);
-printf("\n");
+return (s);
 }
