@@ -1,3 +1,4 @@
+#include<stdio.h>
 #include "main.h"
 /**
  * Function to print binary representation of a number without using the following
@@ -8,14 +9,13 @@
  */
 void print_binary(unsigned long int n)
 {
-if (n >> 0)
-{
+int binary;
 if (n >> 1)
 print_binary(n >> 1);
-_putchar((n & 1) + '0');
+binary = n & 1;
+putchar(binary + '0');
 }
-else
+int main()
 {
-_putchar('0');
-}
+return 0;
 }
