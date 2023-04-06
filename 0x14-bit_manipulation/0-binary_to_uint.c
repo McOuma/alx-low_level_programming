@@ -3,21 +3,24 @@
  *the functions convers binary numbers to unasigned int.
  *
  *The return value is unasigned int 
- *
+ *Author: McOuma
  */
-unsinged int binary_to_uint(const char *b)
+unsigned int binary_to_uint(const char *b)
 {
-unsigned int result = 0;
-int k = 0;
-if (b == NULL){
-return 0;
+unsigned int total = 0;
+int j, k;
+int decimalValue = 1;
+if (!b)
+return (0);
+for (j = 0; b[j] != '\0'; j++);
+k = (j - 1);
+for (; k >= 0; k--)
+{
+if (b[k] != '0' && b[k] != '1')
+return (0);
+if (b[k] == '1')
+total += decimalValue;
+decimalValue *= 2;
 }
-while (b[k] != '\0'){
-if (b[k] ! = '0' && b[k] !='1'{
-return 0;}
-result = result << 1;
-result += b[k] - '0';
-k++;
-}
-return result;
+return (total);
 }
