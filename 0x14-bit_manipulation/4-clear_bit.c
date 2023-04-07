@@ -9,14 +9,11 @@
  */
 int clear_bit(unsigned long int *n, unsigned int index)
 {
-if (index > 63
-{
-return -1;
-}
-unsigned long int fish = 1UL << index;
-if (*n & fish)
-{
-*n ^= fish;
-}
-return 1;
+unsigned int age;
+if (index > 63)
+return (-1);
+age = 1 << index;
+if (*n & age)
+*n ^= age;
+return (1);
 }
